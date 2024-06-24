@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>{{ title }}</title>
+	<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}"/>
+
+	<!-- for-mobile-apps -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="keywords" content="Agro Harvest Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+
+	<style>
+		html {
+			font-size: 1rem;
+		}
+
+		@media (min-width: 576px) {
+			html {
+				font-size: 1.25rem;
+			}
+		}
+
+		@media (min-width: 768px) {
+			html {
+				font-size: 1.5rem;
+			}
+		}
+
+		@media (min-width: 992px) {
+			html {
+				font-size: 1.75rem;
+			}
+		}
+
+		@media (min-width: 1200px) {
+			html {
+				font-size: 2rem;
+			}
+
+			html {
+				font-size: 1rem;
+			}
+
+			h1 {
+				font-size: 1.2rem;
+			}
+
+			h2 {
+				font-size: 1.1rem;
+			}
+
+			@media (min-width: 768px) {
+				html {
+					font-size: 1.1rem;
+				}
+
+				h1 {
+					font-size: 1.3rem;
+				}
+
+				h2 {
+					font-size: 1.2rem;
+				}
+			}
+
+			@media (min-width: 991px) {
+				html {
+					font-size: 1.2rem;
+				}
+
+				h1 {
+					font-size: 1.5rem;
+				}
+
+				h2 {
+					font-size: 1.4rem;
+				}
+			}
+
+			@media (min-width: 1200px) {
+				html {
+					font-size: 1.2rem;
+				}
+
+				h1 {
+					font-size: 1.7rem;
+				}
+
+				h2 {
+					font-size: 1.6rem;
+				}
+			}
+
+		}
+	</style>
+	<style>
+		.eyes {
+			width: 100px; /* Updated eye container width */
+			height: 50px; /* Updated eye container height */
+			position: fixed;
+			top: 115px; /* Adjust the top space here */
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 9999;
+			pointer-events: none;
+			display: flex;
+			justify-content: space-between; /* Add this line */
+		
+		}
+	
+		.eye {
+			width: 30px; /* Updated eye size */
+			height: 30px; /* Updated eye size */
+			border: 3px solid #000; /* Updated border size */
+			display: inline-block;
+			border-radius: 50%;
+			position: relative;
+			background-color: white;
+			top:-10px;
+		}
+	
+		.pupille {
+			width: 18px; /* Updated pupil size */
+			height: inherit;
+			position: absolute;
+			right: 2px; /* Adjusted position relative to eye */
+		}
+	
+		.pupille:before {
+			content: '';
+			display: block;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 15px;
+			height: 15px;
+			border-radius: 50%;
+			background-color: #000;
+		}
+	
+		.rightEye {
+			right: 10px; /* Move the left eye 25 pixels to the right */
+	
+		}
+	
+		.leftEye {
+			right: 2px; /* Move the left eye 25 pixels to the right */
+	
+		}
+	
+		.overlayed-image {
+			position: fixed;
+			top: 5px; /* Adjusted to match eyes */
+			left: 50%; /* Adjusted to match eyes */
+			transform: translateX(-50%);
+			max-width: 25%; /* Adjust maximum width */
+			max-height: 25%; /* Adjust maximum height */
+			z-index: 9998; /* Ensure image is below eyes */
+		}
+	</style>
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+
+		
+
+	</script>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	</body>
+	<!-- css files -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
+	<!-- bootstrap css -->
+	<link href="{{ url_for('static', filename='css/style.css') }}" rel='stylesheet' type='text/css' />
+	<!-- custom css -->
+	<link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet"><!-- fontawesome css -->
+	<!-- //css files -->
+	<!-- <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.png?') }}"> -->
+
+
+	<script type="text/JavaScript" src="{{ url_for('static', filename='scripts/cities.js') }}"></script>
+
+
+	<!-- google fonts -->
+	<link href="//fonts.googleapis.com/css?family=Thasadith:400,400i,700,700i&amp;subset=latin-ext,thai,vietnamese"
+		rel="stylesheet">
+	<!-- //google fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Allura&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+80s+Fade&family=Rubik+Gemstones&display=swap" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Nosifer&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rampart+One&family=Rubik+80s+Fade&family=Rubik+Gemstones&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Kablammo&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Kablammo&family=Merriweather+Sans:wght@800&display=swap" rel="stylesheet">
+<style>
+		header {
+			background-color: rgba(30, 30, 30, 1);
+			margin-top: 0rem;
+			display: block;
+
+		}
+	</style>
+</head>
+
+<body>
+
+	<!-- Navigation -->
+
+
+<!-- banner -->
+
+<!-- //banner -->
+
+<!-- core values -->
+
+<!-- //core values -->
+
+<!-- Products & Services -->
+<section class="blog py-4" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{ url_for('static', filename='images/i222.jpeg') }}'); background-size: cover; background-attachment: fixed; padding-top: 3rem; height: 100vh; overflow: auto;">
+	<div class="eyes">
+        <div class="eye leftEye">
+            <div class="pupille"></div>
+        </div>
+        <div class="eye rightEye">
+            <div class="pupille"></div>
+        </div>
+    </div>
+	<img src="{{ url_for('static', filename='images/eyebody.png') }}" alt="Overlayed Image" class="overlayed-image">
+	
+	<nav class="navbar navbar-expand-lg  static-top" style="color: black">
+		<div class="container">
+			<a class="navbar-brand" href="{{ url_for('home') }}">
+				<img src="{{ url_for('static', filename='images/i3.png') }}" alt="" class="drift-on-hover" style="max-width: 200px; max-height: 200px; position: relative; top: 10px;">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+				aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="{{ url_for('home') }}">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{ url_for('crop_recommend') }}">Crop</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{ url_for('fertilizer_recommendation') }}">Fertilizer</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{ url_for('disease_prediction') }}">Disease</a>
+					</li>
+				</ul>
+			</div>
+			
+            
+		</div>
+	</nav>
+	<style>
+    body {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  </style>
+  <style>
+    #predictButton {
+      transition: transform 0.5s;
+    }
+  </style>
+  <br>
+  <br>
+  
+
+  <h3 class="heading  mb-4 text-center" style="color: #FAEED1; font-family:Rubik Gemstones; font-size:60px">Crop Recommender</h3>
+  <p style="text-align: center; color: #FAEED1;"><b>*Nitrogen, Phosphorous and Potassium are in mg/l units</b></p>
+  <h4 style="text-align: center; color: #42ba1b;"><b>Challenge: Try clicking 'Predict' before filling details</b></h4>
+
+  <!--Form Section-->
+  <h2 style="text-align: center; margin: 0px; color: black">
+  </h2>
+
+  <div
+    style="
+      width: 350px;
+      height: 50rem;
+      margin: 0px auto;
+      color: black;
+      border-radius: 25px;
+      padding: 10px 10px;
+    "
+  >
+
+  
+  <form method="POST" action="{{ url_for('crop_prediction') }}" class="circular-form" style="font-size: 1.2rem;">
+    <div class="form-row">
+        <div class="form-group">
+            <label for="Nitrogen" class="form-label" style="color: white; display: flex; justify-content: center;" ;><b>Nitrogen</b></label>
+            <input type="number" class="form-control" id="Nitrogen" name="nitrogen" placeholder="Enter the value" size="60" style="width: 100%; background-color: #FFF7F1;" required />
+        </div>
+        <div class="form-group">
+            <label for="Phosphorous" class="form-label" style="color: white; display: flex; justify-content: center;"><b>Phosphorous</b></label>
+            <input type="number" class="form-control" id="Phosphorous" name="phosphorous" placeholder="Enter the value" style="width: 100%; background-color: #FFF7F1;" required />
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+            <label for="Pottasium" class="form-label" style="color: white; display: flex; justify-content: center;"><b>Pottasium</b></label>
+            <input type="number" class="form-control" id="Pottasium" name="pottasium" placeholder="Enter the value" size="30" style="width: 100%; background-color: #FFF7F1;" required />
+        </div>
+        <div class="form-group">
+            <label for="ph" class="form-label" style="color: white; display: flex; justify-content: center;"><b>pH Level</b></label>
+            <input type="number" step="0.01" class="form-control" id="ph" name="ph" placeholder="Enter the value" size="15" style="width: 100%; background-color: #FFF7F1;" required />
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+            <label for="Rainfall" class="form-label" style="color: white; display: flex; justify-content: center;"><b>Rainfall (in mm)</b></label>
+            <input type="number" step="0.01" class="form-control" id="Rainfall" name="rainfall" placeholder="Enter the value" size="15" style="width: 100%; background-color: #FFF7F1;" required />
+        </div>
+        <div class="form-group">
+            <label for="State" class="form-label" style="color: white; display: flex; justify-content: center;"><b>State</b></label>
+            <select onchange="print_city('state', this.selectedIndex);" id="sts" name="stt" class="form-control"style="width: 100%; background-color: #FFF7F1;" required></select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="City" class="form-label" style="color: white; display: flex; justify-content: center;"><b>City</b></label>
+        <select id="state" class="form-control" name="city" style="width: 100%; background-color: #FFF7F1;" required></select>
+        <script language="javascript">print_state("sts");</script>
+    </div>
+    <div class="form-group" style="display: flex; justify-content: center;">
+        <button type="submit" id="predictButton" class="btn btn-info"  style="color: #FFF7F1";>Predict</button>
+    </div>
+</form>
+
+  
+  </div>
+  <footer class="text-center py-5">
+    <div class="container py-md-3">
+      <!-- logo -->
+			<h2 class="logo2 text-center">
+				<a href="{{ url_for('home') }}" style:"color:black">
+					AgroGuide
+				</a>
+			</h2>
+  </footer>
+</section>
+
+
+
+<!-- Form section -->
+<!-- //move top icon -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const predictButton = document.getElementById('predictButton');
+    let clickCount = 0;
+
+    predictButton.addEventListener('mouseover', function() {
+      const rect = predictButton.getBoundingClientRect();
+      const randomX = Math.random() * window.innerWidth;
+      const randomY = Math.random() * window.innerHeight;
+      const distance = Math.sqrt((randomX - rect.x) ** 2 + (randomY - rect.y) ** 2);
+
+      if (!allFieldsFilled()) {
+        predictButton.style.transform = `translate(${(randomX - rect.x - rect.width / 2) / distance * 100}px, ${(randomY - rect.y - rect.height / 2) / distance * 100}px)`;
+      }
+    });
+
+    predictButton.addEventListener('mouseout', function() {
+      if (!allFieldsFilled()) {
+        predictButton.style.transform = '';
+      }
+    });
+
+    predictButton.addEventListener('click', function() {
+      clickCount++;
+      if (clickCount > 5) {
+        alert("This isn't a football game");
+      }
+    });
+
+    const inputs = document.querySelectorAll('input[type="number"]');
+    const selects = document.querySelectorAll('select');
+
+    function allFieldsFilled() {
+      let filled = true;
+      inputs.forEach(input => {
+        if (input.value === '') filled = false;
+      });
+      selects.forEach(select => {
+        if (select.value === '') filled = false;
+      });
+      return filled;
+    }
+
+    function checkFields() {
+      const allFilled = allFieldsFilled();
+      predictButton.disabled = !allFilled;
+
+      if (!allFilled) {
+        const rect = predictButton.getBoundingClientRect();
+        const randomX = Math.random() * window.innerWidth;
+        const randomY = Math.random() * window.innerHeight;
+        const distance = Math.sqrt((randomX - rect.x) ** 2 + (randomY - rect.y) ** 2);
+        predictButton.style.transform = `translate(${(randomX - rect.x - rect.width / 2) / distance * 20}px, ${(randomY - rect.y - rect.height / 2) / distance * 20}px)`;
+      } else {
+        predictButton.style.transform = 'none';
+        predictButton.style.backgroundColor = 'green';
+        predictButton.removeEventListener('mouseover', predictButton.movingEventListener);
+        predictButton.removeEventListener('mouseout', predictButton.movingEventListener);
+      }
+    }
+
+    predictButton.movingEventListener = function(event) {
+      if (event.type === 'mouseover') {
+        const rect = predictButton.getBoundingClientRect();
+        const randomX = Math.random() * window.innerWidth;
+        const randomY = Math.random() * window.innerHeight;
+        const distance = Math.sqrt((randomX - rect.x) ** 2 + (randomY - rect.y) ** 2);
+        predictButton.style.transform = `translate(${(randomX - rect.x - rect.width / 2) / distance * 100}px, ${(randomY - rect.y - rect.height / 2) / distance * 100}px)`;
+      } else {
+        predictButton.style.transform = '';
+      }
+    };
+
+    predictButton.addEventListener('mouseover', predictButton.movingEventListener);
+    predictButton.addEventListener('mouseout', predictButton.movingEventListener);
+
+    inputs.forEach(input => {
+      input.addEventListener('input', checkFields);
+    });
+
+    selects.forEach(select => {
+      select.addEventListener('change', checkFields);
+    });
+  });
+</script>
+
+<script>
+    var eyeball = function (selector) {
+        var eye = document.querySelector(selector),
+            pupille = eye.querySelector('.pupille'),
+            eyeArea = eye.getBoundingClientRect();
+
+
+        var eyeRoll = function (mouseX, mouseY) {
+            var radian = Math.atan2(mouseY - (eyeArea.y + eyeArea.height * 0.5), mouseX - (eyeArea.x + eyeArea.width * 0.5));
+            pupille.style.transform = 'rotate(' + (180 * radian / Math.PI - 90) + 'deg)';
+        };
+
+        return {
+            eyeRoll: eyeRoll
+        };
+    };
+
+    var leftEye = eyeball('.leftEye');
+    var rightEye = eyeball('.rightEye');
+
+    window.addEventListener('mousemove', function (e) {
+        leftEye.eyeRoll(e.pageX, e.pageY);
+        rightEye.eyeRoll(e.pageX, e.pageY);
+    });
+</script>
+</body>
+
+</html>

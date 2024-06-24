@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{{ title }}</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" />
+
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Agro Harvest Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+
+    <!-- css files -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
+    <!-- bootstrap css -->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel='stylesheet' type='text/css' />
+    <!-- custom css -->
+    <link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet"><!-- fontawesome css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Nosifer&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rampart+One&family=Rubik+80s+Fade&family=Rubik+Gemstones&display=swap" rel="stylesheet">
+
+    <!-- //css files -->
+    <!-- <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.png?') }}"> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='images/dis1.jpg') }}");
+
+        }
+
+        header {
+            background-color: rgba(30, 30, 30, 1);
+            margin-top: 0rem;
+            display: block;
+        }
+        
+        .loading-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            z-index: 9999;
+        }
+        
+        .loading-icon {
+            border: 8px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 8px solid #3498db;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+
+    <style>
+        .eyes {
+            width: 100px; /* Updated eye container width */
+            height: 50px; /* Updated eye container height */
+            position: fixed;
+            top: 115px; /* Adjust the top space here */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 9999;
+            pointer-events: none;
+            display: flex;
+            justify-content: space-between; /* Add this line */
+        
+        }
+    
+        .eye {
+            width: 30px; /* Updated eye size */
+            height: 30px; /* Updated eye size */
+            border: 3px solid #000; /* Updated border size */
+            display: inline-block;
+            border-radius: 50%;
+            position: relative;
+            background-color: white;
+            top:-10px;
+        }
+    
+        .pupille {
+            width: 18px; /* Updated pupil size */
+            height: inherit;
+            position: absolute;
+            right: 2px; /* Adjusted position relative to eye */
+        }
+    
+        .pupille:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #000;
+        }
+    
+        .rightEye {
+            right: 10px; /* Move the left eye 25 pixels to the right */
+    
+        }
+    
+        .leftEye {
+            right: 2px; /* Move the left eye 25 pixels to the right */
+    
+        }
+    
+        .overlayed-image {
+            position: fixed;
+            top: 5px; /* Adjusted to match eyes */
+            left: 50%; /* Adjusted to match eyes */
+            transform: translateX(-50%);
+            max-width: 25%; /* Adjust maximum width */
+            max-height: 25%; /* Adjust maximum height */
+            z-index: 9998; /* Ensure image is below eyes */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="spotlight" id="spotlight"></div> <!-- Navigation -->
+
+
+    <section class="blog py-4" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{ url_for('static', filename='images/i222.jpeg') }}'); background-size: cover; background-attachment: fixed; padding-top: 3rem; height: 100vh; overflow: auto;">
+        <div class="eyes">
+            <div class="eye leftEye">
+                <div class="pupille"></div>
+            </div>
+            <div class="eye rightEye">
+                <div class="pupille"></div>
+            </div>
+        </div>
+        <img src="{{ url_for('static', filename='images/eyebody.png') }}" alt="Overlayed Image" class="overlayed-image">
+    
+        <nav class="navbar navbar-expand-lg static-top" style="color: black">
+            <div class="container">
+                <a class="navbar-brand" href="{{ url_for('home') }}">
+                    <img src="{{ url_for('static', filename='images/i3.png') }}" alt="" class="drift-on-hover"
+                        style="max-width: 200px; max-height: 200px; position: relative; top: 10px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('crop_recommend') }}">Crop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('fertilizer_recommendation') }}">Fertilizer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('disease_prediction') }}">Disease</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <br>
+        <br>
+        
+        <h3 class="heading  mb-4 text-center" style="color: #FAEED1; font-family:Rubik Gemstones; font-size:60px">Disease Predictor</h3>
+
+
+        <div style="width: 350px; margin: 0 auto; color: black; border-radius: 25px; padding: 10px;">
+            <form id="imageForm" class="form-signin" method="post" enctype="multipart/form-data">
+                <h2 class="h4 mb-3 font-weight-normal">
+                    <div style="display: flex; justify-content: center;">
+                        <b style="color: white; font-size: 30px; white-space: nowrap;">Please upload the image of the
+                            diseased plant</b>
+                    </div>
+                </h2>
+                <div style="text-align: center;">
+                    <label for="fileInput"
+                        style="font-weight: bold; font-size: 20px; display: inline-block; width: 100px; height: 40px; background-color: #42ba1b; color: #FAEED1; border: none; border-radius: 4px; cursor: pointer; text-align: center; line-height: 40px; transition: all 0.3s ease-in-out; box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);"
+                        onmouseover="this.style.boxShadow = '0px 2px 8px rgba(0, 0, 0, 0.7)'; this.style.transform = 'translateY(-4px)';"
+                        onmouseout="this.style.boxShadow = '0px 0px 4px rgba(0, 0, 0, 0.2)'; this.style.transform = 'translateY(0px)';">
+                        Upload
+                    </label>
+                    <input type="file" name="file" id="fileInput" class="file-input" style="display: none;"
+                        onchange="preview_image(event)">
+                </div>
+
+                <div class="loading-overlay" id="loadingOverlay">
+                    <div class="loading-icon"></div>
+                    <p style="color: black;">Analyzing...</p>
+                </div>
+
+                <img id="output-image" class="rounded mx-auto d-block" />
+                <br>
+            </form>
+        </div>
+
+
+    </section>
+
+
+
+    <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <!-- //scripts -->
+
+    <script type="text/javascript">
+        function preview_image(event) {
+            var reader = new FileReader();
+            reader.onload = function () {
+                var output = document.getElementById('output-image')
+                output.src = reader.result;
+                // Show loading overlay
+                document.getElementById('loadingOverlay').style.display = 'flex';
+                // Simulate analysis delay (replace setTimeout with actual analysis process)
+                setTimeout(function() {
+                    // Hide loading overlay after analysis
+                    document.getElementById('loadingOverlay').style.display = 'none';
+                    // Submit the form
+                    document.getElementById('imageForm').submit();
+                }, 3000); // Change 3000 to actual analysis duration
+            }
+            reader.readAsDataURL(event.target.files[0]);
+        }
+    </script>
+    <script>
+        // JavaScript to update spotlight position based on mouse movement
+        document.addEventListener("mousemove", function (event) {
+            const spotlight = document.getElementById("spotlight");
+            const rect = spotlight.getBoundingClientRect();
+            const x = (event.clientX - rect.left) / rect.width * 100;
+            const y = (event.clientY - rect.top) / rect.height * 100;
+
+            // Adjust the values to correct the direction
+            const correctedX = 100 - x;
+            const correctedY = 100 - y;
+
+            spotlight.style.backgroundPosition = `${correctedX}% ${correctedY}%`;
+        });
+    </script>
+</body>
+<script>
+    var eyeball = function (selector) {
+        var eye = document.querySelector(selector),
+            pupille = eye.querySelector('.pupille'),
+            eyeArea = eye.getBoundingClientRect();
+
+
+        var eyeRoll = function (mouseX, mouseY) {
+            var radian = Math.atan2(mouseY - (eyeArea.y + eyeArea.height * 0.5), mouseX - (eyeArea.x + eyeArea.width * 0.5));
+            pupille.style.transform = 'rotate(' + (180 * radian / Math.PI - 90) + 'deg)';
+        };
+
+        return {
+            eyeRoll: eyeRoll
+        };
+    };
+
+    var leftEye = eyeball('.leftEye');
+    var rightEye = eyeball('.rightEye');
+
+    window.addEventListener('mousemove', function (e) {
+        leftEye.eyeRoll(e.pageX, e.pageY);
+        rightEye.eyeRoll(e.pageX, e.pageY);
+    });
+</script>
+</html>

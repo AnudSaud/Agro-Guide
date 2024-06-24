@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>{{ title }}</title>
+	<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}"/>
+
+	<!-- for-mobile-apps -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="keywords" content="Agro Harvest Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+
+	<style>
+		html {
+			font-size: 1rem;
+		}
+
+		@media (min-width: 576px) {
+			html {
+				font-size: 1.25rem;
+			}
+		}
+
+		@media (min-width: 768px) {
+			html {
+				font-size: 1.5rem;
+			}
+		}
+
+		@media (min-width: 992px) {
+			html {
+				font-size: 1.75rem;
+			}
+		}
+
+		@media (min-width: 1200px) {
+			html {
+				font-size: 2rem;
+			}
+
+			html {
+				font-size: 1rem;
+			}
+
+			h1 {
+				font-size: 1.2rem;
+			}
+
+			h2 {
+				font-size: 1.1rem;
+			}
+
+			@media (min-width: 768px) {
+				html {
+					font-size: 1.1rem;
+				}
+
+				h1 {
+					font-size: 1.3rem;
+				}
+
+				h2 {
+					font-size: 1.2rem;
+				}
+			}
+
+			@media (min-width: 991px) {
+				html {
+					font-size: 1.2rem;
+				}
+
+				h1 {
+					font-size: 1.5rem;
+				}
+
+				h2 {
+					font-size: 1.4rem;
+				}
+			}
+
+			@media (min-width: 1200px) {
+				html {
+					font-size: 1.2rem;
+				}
+
+				h1 {
+					font-size: 1.7rem;
+				}
+
+				h2 {
+					font-size: 1.6rem;
+				}
+			}
+
+		}
+	</style>
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+
+		
+
+	</script>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	</body>
+	<!-- css files -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
+	<!-- bootstrap css -->
+	<link href="{{ url_for('static', filename='css/style.css') }}" rel='stylesheet' type='text/css' />
+	<!-- custom css -->
+	<link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet"><!-- fontawesome css -->
+	<!-- //css files -->
+	<!-- <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.png?') }}"> -->
+
+
+	<script type="text/JavaScript" src="{{ url_for('static', filename='scripts/cities.js') }}"></script>
+
+
+	<!-- google fonts -->
+	<link href="//fonts.googleapis.com/css?family=Thasadith:400,400i,700,700i&amp;subset=latin-ext,thai,vietnamese"
+		rel="stylesheet">
+	<!-- //google fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Allura&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+80s+Fade&family=Rubik+Gemstones&display=swap" rel="stylesheet">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Nosifer&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rampart+One&family=Rubik+80s+Fade&family=Rubik+Gemstones&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Kablammo&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Kablammo&family=Merriweather+Sans:wght@800&display=swap" rel="stylesheet">
+
+<style>
+	.eyes {
+        width: 100px; /* Updated eye container width */
+        height: 50px; /* Updated eye container height */
+        position: fixed;
+        top: 115px; /* Adjust the top space here */
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 9999;
+        pointer-events: none;
+		display: flex;
+		justify-content: space-between; /* Add this line */
+	
+    }
+
+    .eye {
+        width: 30px; /* Updated eye size */
+        height: 30px; /* Updated eye size */
+        border: 3px solid #000; /* Updated border size */
+        display: inline-block;
+        border-radius: 50%;
+        position: relative;
+        background-color: white;
+		top:-10px;
+    }
+
+    .pupille {
+        width: 18px; /* Updated pupil size */
+        height: inherit;
+        position: absolute;
+        right: 2px; /* Adjusted position relative to eye */
+    }
+
+    .pupille:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #000;
+    }
+
+	.rightEye {
+		right: 10px; /* Move the left eye 25 pixels to the right */
+
+	}
+
+	.leftEye {
+		right: 2px; /* Move the left eye 25 pixels to the right */
+
+	}
+
+	.overlayed-image {
+        position: fixed;
+        top: 5px; /* Adjusted to match eyes */
+        left: 50%; /* Adjusted to match eyes */
+        transform: translateX(-50%);
+        max-width: 25%; /* Adjust maximum width */
+        max-height: 25%; /* Adjust maximum height */
+        z-index: 9998; /* Ensure image is below eyes */
+    }
+</style>
+
+	
+</head>
+
+
+	
+	  
+
+	<!-- Navigation -->
+
+
+<!-- banner -->
+
+<!-- //banner -->
+
+<!-- core values -->
+
+<!-- //core values -->
+
+<!-- Products & Services -->
+<section class="blog py-4" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{ url_for('static', filename='images/i222.jpeg') }}'); background-size: cover; background-attachment: fixed; padding-top: 3rem; height: 100vh; overflow: auto;">
+    <div class="eyes">
+        <div class="eye leftEye">
+            <div class="pupille"></div>
+        </div>
+        <div class="eye rightEye">
+            <div class="pupille"></div>
+        </div>
+    </div>
+	<img src="{{ url_for('static', filename='images/eyebody.png') }}" alt="Overlayed Image" class="overlayed-image">
+
+    <nav class="navbar navbar-expand-lg fixed-navbar static-top" style="color: black">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('home') }}">
+                <img src="{{ url_for('static', filename='images/i3.png') }}" alt="" class="drift-on-hover" style="max-width: 200px; max-height: 200px; position: relative; top: 10px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('crop_recommend') }}">Crop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('fertilizer_recommendation') }}">Fertilizer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('disease_prediction') }}">Disease</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container py-md-5" style=" color: white;">
+        <h3 class="heading mb-sm-5 mb-4 text-center" style="color: #FAEED1; font-family:Rubik Gemstones; font-size:60px">From Soil to Solution</h3>
+        <div class="row blog-grids">
+            <div class="col-lg-4 col-md-6 blog-left mb-lg-0 mb-sm-5 pb-lg-0 pb-5">
+                <a href="{{ url_for('crop_recommend') }}" class="item-link">
+                    <div class="item-container">
+                        <img src="{{ url_for('static', filename='images/cropp.png') }}" class="img-fluid item-image" alt="">
+                        <p class="item-text">Crop Recommender</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6 blog-middle mb-lg-0 mb-sm-5 pb-lg-0 pb-md-5">
+                <a href="{{ url_for('fertilizer_recommendation') }}" class="item-link">
+                    <div class="item-container" style="margin-top: 120px;">
+                        <img src="{{ url_for('static', filename='images/fertii.png') }}" class="img-fluid item-image" alt="">
+                        <p class="item-text" style=" left: -20px;">Fertilizer Recommender</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6 blog-right mt-lg-0 mt-5 pt-lg-0 pt-md-5">
+                <div class="item-container">
+                    <a href="{{ url_for('disease_prediction') }}">
+                        <img src="{{ url_for('static', filename='images/dieseasee.png') }}" class="img-fluid item-image" alt="">
+                        <p class="item-text">Disease Predictor</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center py-5">
+        <div class="container py-md-3">
+            <!-- logo -->
+            <h2 class="logo2 text-center">
+                <a href="{{ url_for('home') }}" style:"color:black">
+                    AgroGuide
+                </a>
+                <br>
+                <h3 style="color:white">Mentor : Dr. B S Harish and Dr. C K Roopa</h3>
+            </h2>
+        </div>
+    </footer>
+</section>
+
+<!-- //Products & Services -->
+
+<!-- //footer -->
+
+<!-- move top icon -->
+<!-- //move top icon -->
+
+</body>
+
+
+<script>
+	var logo = document.getElementById("logo");
+	var rotation = 0;
+
+	function rotateLogo() {
+		rotation += 0.5;
+		logo.style.transform = "rotate(" + rotation + "deg)";
+		requestAnimationFrame(rotateLogo);
+	}
+
+	rotateLogo();
+</script>
+<script>
+    var eyeball = function (selector) {
+        var eye = document.querySelector(selector),
+            pupille = eye.querySelector('.pupille'),
+            eyeArea = eye.getBoundingClientRect();
+
+
+        var eyeRoll = function (mouseX, mouseY) {
+            var radian = Math.atan2(mouseY - (eyeArea.y + eyeArea.height * 0.5), mouseX - (eyeArea.x + eyeArea.width * 0.5));
+            pupille.style.transform = 'rotate(' + (180 * radian / Math.PI - 90) + 'deg)';
+        };
+
+        return {
+            eyeRoll: eyeRoll
+        };
+    };
+
+    var leftEye = eyeball('.leftEye');
+    var rightEye = eyeball('.rightEye');
+
+    window.addEventListener('mousemove', function (e) {
+        leftEye.eyeRoll(e.pageX, e.pageY);
+        rightEye.eyeRoll(e.pageX, e.pageY);
+    });
+</script>
+
+</html>
+
